@@ -6,7 +6,7 @@ jdk:
 - openjdk13
 
 before_install:
-- mvn clean
+- chmod +x mvnw
 
 script:
 #We avoid this error :" the job exceeded the maximum log length and has been terminated "
