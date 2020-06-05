@@ -5,16 +5,14 @@ FROM openjdk:13-jdk-alpine
 LABEL maintainer="njusticej@gmail.com"
 
 # Add a volume pointing to /tmp
-VOLUME /tmp
+WORKDIR /usr/app
 
 # Make port 8080 available to the world outside this container
 EXPOSE 9700
 
-# The application's jar file
-ARG JAR_FILE
 
 # Add the application's jar to the container
-COPY ${JAR_FILE} /app.jar
+COPY ./target/cicd-applied-to-spring-boot-java-app-0.0.1-SNAPSHOT.jar .
 
 # Run the jar file
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
+ENTRYPOINT ["java","-jar","cicd-applied-to-spring-boot-java-app.0.0.1-SNAPSHOT.jar"]

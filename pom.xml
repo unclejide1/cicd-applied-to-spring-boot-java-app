@@ -11,6 +11,7 @@
     <groupId>com.cicd</groupId>
     <artifactId>cicd-applied-to-spring-boot-java-app</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
     <name>cicd-applied-to-spring-boot-java-app</name>
     <description>Demo project for Spring Boot</description>
 
